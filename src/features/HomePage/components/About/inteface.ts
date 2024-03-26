@@ -1,0 +1,1 @@
+export interface IAbout{id: number; src: string; title: string; text: string}
