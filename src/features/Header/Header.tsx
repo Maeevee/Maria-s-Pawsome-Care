@@ -30,18 +30,19 @@ export const Header = () => {
     }, []);
 
     return(
-        <Container className="h-16 fixed flex items-center w-full">
-            {pathname !== "/" && <Link href={"/"}><p>Maria's Pawsome Care</p></Link>}
-            {pathname === "/" && 
-            <div>
-                {showLink &&
-                    <Link href={"/"}><p>Maria's Pawsome Care</p></Link>
-                }
-            </div>}
-            <div className="ml-auto flex items-center">
-                <Link href={"client"}><button className="border py-2 px-10 mr-5 bg-light-peach" type="button">Book me</button></Link>
-                <button type="button"><CiMenuBurger size={24}/></button>
-            </div>
-        </Container>
+        <p>.</p>
+        // <Container className="h-16 fixed flex items-center w-full">
+        //     {pathname !== "/" && <Link href={"/"}><p>Maria's Pawsome Care</p></Link>}
+        //     {pathname === "/" && 
+        //     <div>
+        //         {showLink &&
+        //             <Link href={"/"}><p>Maria's Pawsome Care</p></Link>
+        //         }
+        //     </div>}
+        //     <div className="ml-auto flex items-center">
+        //         <Link href={"client"}><button className="border py-2 px-10 mr-5 bg-light-peach" type="button">Book me</button></Link>
+        //         <button type="button"><CiMenuBurger size={24}/></button>
+        //     </div>
+        // </Container>
     )
 }
