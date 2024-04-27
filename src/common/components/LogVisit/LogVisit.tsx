@@ -11,6 +11,8 @@ export const LogVisit = () => {
         try{
             const response = await axios.get('https://api.ipify.org/?format=json')
             const ip = response.data.ip
+            console.log('======>', ip);
+            
             const location = await axios.get(`http://api.ipstack.com/${ip}?access_key=${key}`)
             const visitData = {
                 timesStamp: Date.now(),
@@ -19,6 +21,7 @@ export const LogVisit = () => {
             }
             console.log(visitData);
             
+            await axios.post('https://visitors-stat-back.onrender.com/log', visitData)
         } catch(error:any){
             console.log(error.message);
         }
